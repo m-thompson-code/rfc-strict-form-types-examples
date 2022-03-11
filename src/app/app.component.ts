@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormGroup, FormArray, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,15 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  form: FormGroup<any>;
+  form: FormGroup<{
+    order: FormArray<FormControl<any>[]>,
+  }>;
   constructor() {
     this.form = new FormGroup({
-      field: new FormControl(),
-    });
+      order: new FormArray([
+        new FormControl<any>(''), 
+        new FormControl<any>(0),
+      ]),
+    })
   }
 }

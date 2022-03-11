@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    line-height: 1.65;
+}
+
+label, input {
+    display: block;
+}
+
+div {
+    padding: 20px;
+    margin-top: 20px;
+    white-space: pre;
+    background:lightblue;
+    border-radius: 4px;
+}

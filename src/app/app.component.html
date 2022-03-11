@@ -1,6 +1,11 @@
 <form [formGroup]="form">
-  <label for="field">Hello World</label>
-  <input id="field" formControlName="field" placeholder="example input">
+  <ng-container formArrayName="order">
+    <label for="order-item">Order Item</label>
+    <input id="order-item" formControlName="0" placeholder="order here">
+  
+    <label for="order-amount">Amount</label>
+    <input type="number" id="order-amount" formControlName="1" placeholder="ex: 3">
+  </ng-container>
 </form>
 
 <div>
