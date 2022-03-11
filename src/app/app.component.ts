@@ -13,8 +13,8 @@ export class AppComponent {
   constructor() {
     this.form = new FormGroup({
       order: new FormArray([
-        new FormControl<any>(''), 
-        new FormControl<any>(0),
+        new FormControl<string | null>(''), 
+        new FormControl<number | null>(0),
       ]),
     })
   }
