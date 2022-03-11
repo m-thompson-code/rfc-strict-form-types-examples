@@ -8,7 +8,7 @@ import { FormGroup, FormArray, FormControl } from '@angular/forms';
 })
 export class AppComponent {
   form: FormGroup<{
-    order: FormArray<FormControl<any>[]>,
+    order: FormArray<FormControl<string | number | null>[]>,
   }>;
   constructor() {
     this.form = new FormGroup({
