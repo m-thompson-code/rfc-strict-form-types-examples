@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'rfc-strict-form-types-examples';
+  form: FormGroup<any>;
+  constructor() {
+    this.form = new FormGroup({
+      field: new FormControl(),
+    });
+  }
 }
